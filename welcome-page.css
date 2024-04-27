@@ -1,0 +1,99 @@
+body{
+    font-family: sans-serif, poppins;
+}
+.main-welcome-text{
+    width: auto;
+    height: auto;
+/*    border-style: solid;*/
+    margin-left: 25vw;
+    margin-right: 25vw;
+    margin-top: 100px;
+}.main-welcome-text b{
+    color: royalblue;
+    
+}
+.what{
+       color: #777;
+}
+.ll-des{
+    color: #777;
+}
+.h-text{
+    font-size: 90px;
+    font-weight: bold;
+    color: royalblue; 
+    cursor: pointer;
+}
+.h-des{
+    font-size: 20px;
+    color: #555; 
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+.name-input{
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    border-width: 2.3;
+    border-style: solid;
+    border-color: royalblue;
+    padding: 10px;
+    margin-top: 7px;
+    outline-style: none;
+    transition-duration: 0.3s;
+    font-size: 16px;
+    color: #444;
+    display: block;
+}.name-input:hover{
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    border-width: 2.3;
+    border-style: solid;
+    border-color: royalblue;
+    padding: 10px;
+    margin-top: 7px;
+    outline-style: none;
+    scale: 1.05;
+}
+.primary-done-btn{
+            width: 15%;
+            height: auto;
+            padding: 10px;
+            padding-left: 28px;
+            padding-right: 28px;
+            border-style: hidden;
+            background-color: royalblue;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+            transition-duration: 0.3s;
+            display: block;
+            margin-top: 15px;
+    margin-left: 85%;
+        }.primary-done-btn:hover{
+           scale:1.03;
+        }.primary-done-btn:active{
+           scale:0.98;
+           background-color: royalblue;
+        } 
+.second-tab{
+    display: none;
+}
+.first-tab{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+

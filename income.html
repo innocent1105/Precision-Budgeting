@@ -1,0 +1,88 @@
+<html>
+    <head>
+    <title>
+        Budget system
+        </title>
+        <link rel="stylesheet" href="app-style.css">
+        <link rel="stylesheet" href="income-app-style.css">
+        <link rel="stylesheet" href="welcome-page.css">
+    </head>
+ 
+<body>
+    
+   <div class="main-welcome-text" id="main-welcome-text">
+    <div class="first-tab" id="first-tab">
+    <div class="h-text">What is your income?</div>
+    <div class="h-des">To create your budget, you need to know your whole income.<br><div class="ll-des">What is your monthly income?</div><br>
+    <div class="what"></div>
+    </div>
+    <div class="income-tab">
+    <select id="currency">
+    <option>$</option>    
+    <option>£</option>    
+    <option>K</option>         
+    </select>
+    <input type="number" required class="income-input" name="income" placeholder="Enter your income?" id="income">
+    </div>
+        
+    <div class="">
+        <button class="primary-done-btn" id="done-btn">Proceed</button>
+    </div>
+    </div>
+    
+    </div>
+    
+    <div class="second-income-tab" id="second-income-tab">
+        
+            <div class="h-text">Great!</div>
+            <div class="h-des">You`re all set and ready. Now you can create your budget, <br>fine tune and customise your categories, expenses and more.<br><div class="ll-des">Good luck...</div>
+        </div>
+        <button class="large-primary-income-btn">Create budget</button>
+    </div>
+    <script src="https://unpkg.com/localbase/dist/localbase.dev.js"></script>
+
+    <script src="app.js"></script>
+    <script src="localbase.js"></script>
+    <script>
+    document.getElementById("done-btn").addEventListener("click", ()=>{
+        let income = document.getElementById("income").value;
+        let currency = document.getElementById("currency").value;
+        try{
+            db.collection('income').add({
+                id: 1,
+                income: income,
+                currency: currency
+             })
+        }catch{
+            console.error("theres an error")
+    }
+        document.getElementById("main-welcome-text").style.display = "none";
+        document.getElementById("second-income-tab").style.display = "block";
+      
+    })
+    </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

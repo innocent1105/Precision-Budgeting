@@ -1,0 +1,107 @@
+<html>
+    <head>
+    <title>
+        Budget system
+        </title>
+            <link rel="stylesheet" href="app-style.css">
+        <link rel="stylesheet" href="welcome-page.css">
+    
+    </head>
+ 
+<body>
+    
+    <div class="main-welcome-text">
+    <div class="first-tab" id="first-tab">
+    <div class="h-text">Hello,</div>
+    <div class="h-des">they call us <b>Precision.</b> <br><div class="ll-des">We help people like you Forecast, budget, analyse and save money.</div><br>
+    <div class="what">What should we call you?</div>
+    </div>
+    <div class="name-form">
+    <img src="gamified-images/circular_progress_indicator_small.gif"  id="loader2"width="200px" style="margin-left: 35%; margin-top: 15px; display: none;">
+    <input type="text" required class="name-input" name="name" placeholder="What is your name?" id="username">
+    </div>
+        
+    <div class="">
+        <button class="primary-done-btn" id="primary-done-btn">Proceed</button>
+    </div>
+    </div>
+    
+    <div class="second-tab" id="second-tab">
+          <div class="h-text">Welcome,</div>
+    <div class="h-des"><span id="name">John doe</span>, allow us to walk you through our platform. Its easy! Just follow the steps and you are good to go.<br><br><div class="ll-des">We shall begin with your expense categories.</div><br>
+<!--    <div class="what">What should we call you?</div>-->
+    </div>
+        
+    <div class="">
+        <a href="expense-category.html">
+        <button class="primary-done-btn">Proceed</button>
+        </a>
+        
+    </div>
+    </div>
+    </div>
+    
+    <script src="app.js"></script>
+    <script src="localbase.js"></script>
+    <script>
+    let userLogData = []
+    document.getElementById("primary-done-btn").addEventListener("click", function getNameAndLoadNewTab(){
+        try{
+            let username = document.getElementById("username").value;
+            if(username == ""){
+                console.error("cant save empty user");
+                 document.getElementById("username").style.borderColor = "#ff3155";
+                 document.getElementById("username").style.scale = "1.05";
+            }else{
+                 userLogData.push(username);
+                 console.log("saved successfully.")
+                 console.log(userLogData);
+                 let loader = document.getElementById("loader2").style.display = "block";
+                    document.getElementById("username").style.display = "none";
+            setTimeout(function secondTab(){
+                   document.getElementById("first-tab").style.display = "none";
+                   document.getElementById("name").textContent = username; 
+                document.getElementById("second-tab").style.display = "block"; 
+                },1000) 
+                
+            }
+           }catch{
+            console.error("error occurred...")
+    }   
+})
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+    
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

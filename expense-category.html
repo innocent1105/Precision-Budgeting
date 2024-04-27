@@ -1,0 +1,75 @@
+<html>
+    <head>
+    <title>
+        Budget system
+        </title>
+        <link rel="stylesheet" href="app-style.css">
+    </head>
+    <style>
+
+    </style>
+<body>
+    <nav class="top-gamified-nav">
+    <img class="" src="gamified-images/coin.png" width="20px"><div class="coins-value" id="coins-value">coins</div>
+    </nav>
+     <div class="loader" id="loader">
+            <img src="gamified-images/circular_progress_indicator_small.gif" width="230px">
+        </div>
+        
+    <section class="select-tab">
+   
+       
+       <p class="top-text" id="select-top-text">Select your main expenses<br><small>Select your main expenses amongst these below.</small></p>  
+    <div class="items-tab" id="items-tab">
+     
+    </div>
+    <div class="next-btn-section" id="nxt-btn-section">
+         <button class="primary-btn" id="next1">Next</button>
+    </div>
+        
+        <div class="done" id="done"> 
+            <div class="done-text">
+                
+            <div class="h">That`s it! </div><br>
+                <p>You`re all set for now. You can add more expenses later.<br> Time for your Income.
+                </p>
+            </div>
+            <div class="done-icon">
+            <img src="gamified-images/clap-animation_dribble.gif" width="470px"></div>
+           </div>
+        <div class="done-button" id="done-button">
+           <button class="large-primary-btn" id="large-primary-btn">Continue</button>
+        </div>
+    </section>
+    <script src="https://unpkg.com/localbase/dist/localbase.dev.js"></script>
+
+<script>
+  let db = new Localbase('db')
+</script>
+    <script src="app.js"></script>
+    <script src="localbase.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

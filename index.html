@@ -1,0 +1,239 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sidebar.css">
+     
+    <!----===== Iconscout CSS ===== -->
+<!--    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">-->
+    <script src="https://unpkg.com/localbase/dist/localbase.dev.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+ <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    
+    <title>Precision Budgeting and Finance software</title> 
+</head>
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="images/logo.png" alt="">
+            </div>
+
+            <span class="logo_name">Precision</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#">
+                    <i class="bi bi-grid"></i>
+                    <span class="link-name">Dahsboard</span>
+                </a></li>
+                <li><a href="#">
+                    <i class="bi bi-view-stacked"></i>
+                    <span class="link-name">Expenses</span>
+                </a></li>
+                
+                <li><a href="#">
+                    <i class="bi bi-piggy-bank"></i>
+                    <span class="link-name">Savings</span>
+                </a></li>
+                
+<!--
+                <li><a href="#">
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="link-name">Analytics</span>
+                </a></li>
+-->
+                
+            </ul>
+            
+            <ul class="logout-mode">
+                <li><a href="#">
+                    <i class="uil uil-signout"></i>
+                    <span class="link-name">Logout</span>
+                </a></li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="uil uil-moon"></i>
+                    <span class="link-name">Dark Mode</span>
+                </a>
+
+                <div class="mode-toggle">
+                  <span class="switch"></span>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="uil uil-bars sidebar-toggle"></i>
+
+            <div class="search-box">
+                <i class="uil uil-search"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+            
+            <img src="images/pic.jpg" alt="">
+        </div>
+     
+    <div class="dash-content">
+        <section class="notifications-div" id="notifications-div">
+            <h1 id="note-h1"></h1>
+        <p id="note-p"></p>
+        
+ </section>   
+        <script>
+         
+        </script>    
+     <div class="overview">
+        <section class="main-app-tab">
+            <div class="tab-1" id="refresh-section">
+                <div class="balance-tab">
+                   <span id="balance">$326.67</span>
+                </div>
+                <div class="list-items" id="list-items">
+                    
+                    <div class="b-item">
+                    <div class="b-item-cat">
+                    <i class="bi bi-bag-check"></i>
+                    </div>
+                   <div class="itm-name">
+                       <p class="i-name" id="item-name" >Groceries</p>
+                       <p id="date" class="i-date">19th May, 2023</p>
+                       </div>
+                       <div class="b-itm-btns">
+                       <button class="b-btn1">$643.43</button> </div>
+                      
+                   </div>   
+                    <div class="b-item" id="b-item">
+                    <div class="b-item-cat">
+                    <i class="bi bi-bag-check"></i>
+                    </div>
+                   <div class="itm-name">
+                       <p class="i-name" id="item-name" >Birthday</p>
+                       <p id="date" class="i-date">29th May, 2023</p>
+                    </div>
+                       <div class="b-itm-btns">
+                       <button class="b-btn1">$348.43</button> </div>
+                      
+                   </div> 
+                    
+               
+                </div>
+            </div>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+            <div class="tab-2">
+             <div class="main-sidebar" id="main-sidebar">
+                 <h1>Budget analysis</h1>
+               <div class="graph">
+                   <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                </div>
+            </div>
+               
+            <div class="item-sidebar" id="item-sidebar">
+                <h1 id="cat-name"></h1>
+                <div id="btn-area"></div>
+                <div class="i-tab" id="itab">
+                
+                </div>
+           </div>
+                
+                
+                <!-- item test -->
+                <div class="item-det" id="item-det">
+                    <hr>
+                    <br>
+                <p>Items in this category</p>
+                    <div id="cat-item" class="catItem">
+                        
+                    <div class="item" onclick="showCatItem()">
+                          <h1 id="cat-item-name" class="cat-item-name">Peanut butter</h1>
+                    <h1 id="cat-item-amount" class="cat-item-amount"> $13</h1>
+                    </div>
+                   
+                    <div class="edit-cat-items">
+                        <p class="item-data">Name</p>
+                        <input type="text" id="cat-item-name-edit" value="peanut butter">
+                        <br>
+                        <p class="item-data">Description</p>
+                        <input type="text" id="cat-item-name-edit" value="get butter from shoprite."> 
+                        <p class="item-data">Item Amount</p>
+                        <input type="text" id="cat-item-name-edit" value="$13"> 
+                        
+                        <p class="item-data">Note or Comment</p>
+                        <textarea type="text" id="cat-item-name-edit" value="$23"> Please dont forget butter, lol.
+                        </textarea>
+                        <br>
+                        <br>
+                        <div class="item-buttons">
+                            <button class="delete-itm-btn">delete</button>
+                            <button class="save-itm-btn">save</button>
+                        </div>
+                    </div>
+                </div>
+                    
+        </div>
+            </div>
+            
+                </section>
+
+             
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="budget-items.js"></script>
+    <script src="app.js"></script>
+ 
+<script>
+var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues = [55, 49, 44, 24, 15];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: false,
+      text: "Budget analysis"
+    }
+  }
+});
+</script>
+</body>
+</html>
